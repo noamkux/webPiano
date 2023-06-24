@@ -1,0 +1,37 @@
+  #piano {
+            display: flex;
+            justify-content: center;
+            border: 5px solid black;
+            border-radius: 30px;
+        }
+
+        .white-key {
+            width: 12.5%;
+            height: 400px;
+            background-color: white;
+            border: 1px solid black;
+            z-index: 1;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+        }
+
+        .black-key {
+            position: absolute;
+            background-color: black;
+            width: 6.25%;
+            height: 250px;
+            z-index: 3;
+            border-end-end-radius: 20px;
+            border-end-start-radius: 20px;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            appearance: textfiled;
+            -moz-appearance: textfield;
+        }

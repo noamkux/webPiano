@@ -12,49 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
-    <style>
-        #piano {
-            display: flex;
-            justify-content: center;
-            border: 5px solid black;
-            border-radius: 30px;
-        }
-
-        .white-key {
-            width: 12.5%;
-            height: 400px;
-            background-color: white;
-            border: 1px solid black;
-            z-index: 1;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-
-        }
-
-        .black-key {
-            position: absolute;
-            background-color: black;
-            width: 6.25%;
-            height: 250px;
-            z-index: 3;
-            border-end-end-radius: 20px;
-            border-end-start-radius: 20px;
-        }
-
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-
-        input[type=number] {
-            appearance: textfiled;
-            -moz-appearance: textfield;
-        }
-    </style>
+    
 </head>
 
 <body style="background: rgb(255,247,224);
-            background: linear-gradient(185deg, rgba(255,247,224,1) 17%, rgba(154,213,230,1) 100%); height: 100vh;">
+            background: linear-gradient(185deg, rgba(255,247,224,1) 17%, rgba(154,213,230,1) 100%); height: 100vh;"
+            onload="helloMsg()">
     <div class="m-auto w-75 mt-5" id="piano">
         <div onclick="playSound(`C`)" id="C" class="white-key"
             style="border-start-start-radius : 20px; border-end-start-radius: 20px;"></div>
@@ -71,6 +34,8 @@
         <div onclick="playSound(`B`)" id="B" class="white-key"></div>
         <div onclick="playSound(`CTop`)" id="CTop" class="white-key"
             style="border-start-end-radius : 20px; border-end-end-radius: 20px;"></div>
+            
+       <a href="#welcomSection" style="text-decoration: none; color: #000;"> <h1 class="position-fixed fixed-top">?</h1></a>
     </div>
     <div class="row m-0">
         <!-- metronom col -->
@@ -120,6 +85,13 @@
             </div>
         </div>
     </div>
+    <div class="text-center mt-5 pt-5 container mx-auto w-50 pb-5">
+    <h1 id="welcomSection">Welcom To MyPiano</h1>
+    <h2>an Online Web Piano app</h2>
+    <p>The piano is playble by the keybaord and by clikibg with the mouse.
+    you can change your octave usuing the z key to get lower octave and the x key to get higher octave
+    Web piano is also equipped with a metronom that suppert difftent time signtrue such as (4/4,6/8,5/2,4/1 ect..)</p><h3> Have Fun :) </h3>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
